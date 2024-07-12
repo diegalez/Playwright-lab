@@ -30,19 +30,6 @@ test('get started global logic about us successful', async ({ page }, testInfo) 
 
 });
 
-test('get started global logic about us successful p', async ({ page }) => {
-  await page.goto('https://www.globallogic.com/');
-  
-  await page.click(AboutUs.BUTTON_ABOUT_US)
-
-
-  await page.getByRole('textbox', {name: 'FirstName'}).fill('Diego');
-  await page.getByRole('textbox', {name: 'LastName'}).fill('Diego');
-  await page.getByRole('textbox', {name: 'ValidMsgEmail'}).fill('Diego');
-  await page.getByRole('textbox', {name: 'ValidMsgMessage__c'}).fill('Diego');
-});
-
-
 test('get started global logic about us empty', async ({ page }) => {
   const aboutUsPage = new AboutUsPage(page);
 
