@@ -57,11 +57,18 @@ docker build --tag docker-in-docker-jenkins .
 levantar contenedor de jenkins a partir de la imagen que modificamos
 
 docker run --rm --group-add 0 -v "//var/run/docker.sock:/var/run/docker.sock" -p 8080:8080 -v jenkins_home/var/jenkins_home --name jenkins docker-in-docker-jenkins
+
+sirve ->
+docker run -d --rm --group-add 0 -v "/var/run/docker.sock:/var/run/docker.sock" -p 8080:8080 -v jenkins_home/var/jenkins_home --name jenkins docker-in-docker-jenkins
+
+
+docker run -d --rm --group-add 0 -v /var/run/docker.sock:/var/run/docker.sock -v /path/to/jenkins_home:/var/jenkins_home -p 8080:8080 --name jenkins docker-in-docker-jenkins
+
 ----------------------------------------------
 
 
 This may also be found at: /var/jenkins_home/secrets/initialAdminPassword
-token jenkins -> addd097414474ebcaf6f0dd1b4f3f152
+token jenkins -> 5cb0ad4da37c43a68586d6ffe61d9b54
 
 
 ------------------------
