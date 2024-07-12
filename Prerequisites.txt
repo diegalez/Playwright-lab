@@ -1,0 +1,71 @@
+Tener nodejs instalado
+
+install faker 
+npm install @faker-js/faker
+-------------------
+install  store2
+
+store2 es una biblioteca JavaScript que proporciona una API simple para trabajar con el almacenamiento local del navegador (localStorage) y el almacenamiento de sesión (sessionStorage). Simplifica las operaciones de almacenamiento al proporcionar una interfaz más intuitiva y fácil de usar en comparación con las API nativas de localStorage y sessionStorage.
+npm install store2
+
+-------------------------
+Para instalar canvas, 
+Paso 1: Prerrequisitos
+canvas tiene dependencias nativas, por lo que necesitarás tener instaladas ciertas bibliotecas del sistema. En sistemas basados en Debian (como Ubuntu), puedes instalar las dependencias necesarias con:
+
+sudo apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev
+
+En macOS, puedes usar Homebrew para instalar las dependencias:
+brew install pkg-config cairo pango libpng jpeg giflib librsvg
+
+
+En windows:
+npm install -g windows-build-tools
+
+
+npm install canvas
+
+-----------------------
+ver reporte
+
+npx playwright show-report
+
+actualizar veriones
+npm outdated @playwright/test
+
+npm install -D @playwright/test@latests
+
+los navegadores se instalan en 
+C:\Users\Diego\AppData\Local\ms-playwright
+
+install
+
+--------------------------------------
+Ejecutar test por linea de comandos 
+
+npx playwright test example.spec.ts -g "get started global logic about us empty"
+
+
+
+
+
+-------------------------
+crear imagen de jenkins + cli (si requiero meterle algo más a la imagen debo agregarlo en el dockerfile)
+
+docker build --tag docker-in-docker-jenkins .
+----------------------------------------------
+levantar contenedor de jenkins a partir de la imagen que modificamos
+
+docker run --rm --group-add 0 -v "//var/run/docker.sock:/var/run/docker.sock" -p 8080:8080 -v jenkins_home/var/jenkins_home --name jenkins docker-in-docker-jenkins
+----------------------------------------------
+
+
+This may also be found at: /var/jenkins_home/secrets/initialAdminPassword
+token jenkins -> addd097414474ebcaf6f0dd1b4f3f152
+
+
+------------------------
+Se deben instalar los plugin 
+
+Docker 
+Docker Pipeline
